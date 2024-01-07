@@ -1,0 +1,19 @@
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="events.js"></script> </head>
+<body>
+  <script>
+    const events = new Events();
+
+    $('button').on('click', () => {
+      console.log('Hello');
+    });
+    $('button').on('click', () => {
+      console.log('There!');
+    });
+
+    $('button').trigger('click'); // Will log events to MongoDB and app.log
+
+    $('button').off('click');
+  </script>
+</body>
